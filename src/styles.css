@@ -416,7 +416,7 @@ h2 { font-weight: 500; letter-spacing: -0.02em; }
   width: 100%; margin-inline: 0; padding: 10px;
   border: 1px solid var(--blue); border-radius: 20px; backdrop-filter: blur(7.5px);
 }
-.cta__icon { flex: none; width: 32px; height: 32px; display: grid; place-items: center; }
+.cta__icon { flex: none; width: 32px; height: 32px; display: grid; place-items: center; transform: translateX(5px); }
 .cta__icon img { display: block; width: 32px; height: 32px; }
 .cta__form input, .cta__form textarea { min-width: 0; border: 0; background: transparent; outline: none; font: 500 var(--type-body) var(--font-display); color: var(--navy); padding: 8px; }
 .cta__form .cta__subject, .cta__form textarea { grid-column: 1 / -1; width: 100%; border-top: 1px solid rgba(41, 84, 163, 0.25); }

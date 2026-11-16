@@ -97,7 +97,7 @@ export default function Experience() {
         </section>
       </div>
 
-      <a className="btn experience__cv" href="Karima-Ulya-Hermawan-CV.pdf" download="Karima-Ulya-Hermawan-CV.pdf">
+      <a className="btn experience__cv" href="/Karima%20Ulya%20Hermawan-CV.pdf" download="Karima-Ulya-Hermawan-CV.pdf">
         Download CV
       </a>
     </section>
