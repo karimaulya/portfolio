@@ -4,18 +4,22 @@ import Reveal from './Reveal'
 const DOC_PLACEHOLDER = '/experience/documentation-placeholder.svg'
 
 function DocPhoto({ image, label }: { image?: string; label: string }) {
+  if (!image) return null
+
   return (
-    <div className="experience__documentation">
-      <img
-        src={image ?? DOC_PLACEHOLDER}
-        alt={`${label} photo`}
-        loading="lazy"
-        onError={(e) => {
-          const img = e.currentTarget
-          img.onerror = null
-          img.src = DOC_PLACEHOLDER
-        }}
-      />
+    <div className="experience__photo">
+      <div className="experience__documentation">
+        <img
+          src={image}
+          alt={`${label} photo`}
+          loading="lazy"
+          onError={(e) => {
+            const img = e.currentTarget
+            img.onerror = null
+            img.src = DOC_PLACEHOLDER
+          }}
+        />
+      </div>
     </div>
   )
 }
@@ -34,12 +38,12 @@ export default function Experience() {
           <div className="timeline">
             {achievements.map((item, i) => (
               <Reveal key={item.title} className="timeline__row" delay={i * 80}>
-                <div className="timeline__left" tabIndex={0}>
+                <div className="timeline__left" tabIndex={item.image ? 0 : undefined}>
                   <h3>{item.title}</h3>
                   <p>{item.period}</p>
                 </div>
                 <div className="timeline__node" aria-hidden="true"><span /></div>
-                <div className="timeline__right">
+                <div className="timeline__right" tabIndex={item.image ? 0 : undefined}>
                   <h3>{item.result}</h3>
                   <p>{item.description}</p>
                 </div>
@@ -56,12 +60,12 @@ export default function Experience() {
           <div className="timeline">
             {training.map((item, i) => (
               <Reveal key={item.title} className="timeline__row" delay={i * 80}>
-                <div className="timeline__left" tabIndex={0}>
+                <div className="timeline__left" tabIndex={item.image ? 0 : undefined}>
                   <h3>{item.title}</h3>
                   <p>{item.period}</p>
                 </div>
                 <div className="timeline__node" aria-hidden="true"><span /></div>
-                <div className="timeline__right">
+                <div className="timeline__right" tabIndex={item.image ? 0 : undefined}>
                   <h3>{item.program}</h3>
                   <p>{item.description}</p>
                 </div>
@@ -81,12 +85,12 @@ export default function Experience() {
           <div className="timeline">
             {experience.map((e, i) => (
               <Reveal key={e.org} className="timeline__row" delay={i * 80}>
-                <div className="timeline__left" tabIndex={0}>
+                <div className="timeline__left" tabIndex={e.image ? 0 : undefined}>
                   <h3>{e.org}</h3>
                   <p>{e.period}</p>
                 </div>
                 <div className="timeline__node" aria-hidden="true"><span /></div>
-                <div className="timeline__right">
+                <div className="timeline__right" tabIndex={e.image ? 0 : undefined}>
                   <h3>{e.role}</h3>
                   <p>{e.description}</p>
                 </div>
