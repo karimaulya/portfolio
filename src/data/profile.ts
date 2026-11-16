@@ -1,4 +1,4 @@
-import placeholder from '../assets/hero-placeholder.svg'
+import placeholder from '../assets/hero-placeholder.png'
 import { heroPhoto } from './images'
 import type { Category } from './projects'
 
