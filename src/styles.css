@@ -305,8 +305,9 @@ h2 { font-weight: 500; letter-spacing: -0.02em; }
 .timeline__row:hover .timeline__node span { transform: scale(1.25); }
 
 @media (max-width: 800px) {
-  .experience__content { grid-template-columns: 1fr; gap: 24px; }
-  .experience__group + .experience__group { border-left: 0; border-top: 1px solid rgba(15, 16, 63, 0.12); padding: 20px 0 0; }
+  .experience__content { grid-template-columns: 1fr; gap: 16px; }
+  .experience__group + .experience__group { border-left: 0; border-top: 1px solid rgba(15, 16, 63, 0.12); padding: 16px 0 0; }
+  .experience__group:first-child > .timeline:last-child > .timeline__row:last-child { border-bottom: 0; padding-bottom: 0; }
   .experience__title { margin-bottom: 12px; }
   .experience__title h2 { font-size: clamp(16px, 3vw, 24px); }
   .experience .timeline__row { grid-template-columns: 1fr; gap: 4px; padding-block: 10px; }
